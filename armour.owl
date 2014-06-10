@@ -1,0 +1,1196 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#"
+     xml:base="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasFrontBackSelector -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasFrontBackSelector">
+        <rdfs:subPropertyOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasSelector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector">
+        <rdfs:range rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasSelector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasSelector -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasSelector">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasUpperLowerSelector -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasUpperLowerSelector">
+        <rdfs:subPropertyOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasSelector"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf">
+        <owl:inverseOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyArmour"/>
+        <rdfs:range rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Arm -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Arm">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperArm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Shoulder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Forearm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Elbow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Wrist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Hand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#ArmArmour -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#ArmArmour">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Arm"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Arm"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BackSelector -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BackSelector">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#FrontBackSelector"/>
+        <owl:disjointWith rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#FrontSelector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyArmour -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyArmour">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Couter -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Couter">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Elbow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The couter is the defense for the elbow in a piece of plate armour. Initially just a curved piece of metal, as plate armor progressed the couter became an articulated joint.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Cuirass -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Cuirass">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Trunck"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasFrontBackSelector"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BackSelector"/>
+                                            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#FrontSelector"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Cuirass (French cuirasse, Latin coriaceus, made of leather, from corium, the original breastplate being of leather, pronounced in English as `kwi-rass&#39;), is a piece of armour, formed of a single or multiple pieces of metal or other rigid material, which covers the front of the wearer&#39;s person. In a suit of armour this important piece was generally connected to a back piece and cuirass could refer to the complete torso protecting armour.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Cuisses -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Cuisses">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Thigh"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cuisses are a form of medieval armor worn to protect the thigh. The word is the plural of the French word cuisse meaning &#39;thigh&#39;. While the skirt of a maille shirt or tassets of a cuirass could protect the upper legs from above, a thrust from below could avoid these defenses. Thus, cuisses were worn on the thighs to protect from such blows. Padded cuisses made in a similar way to a gambeson were commonly worn by knights in the 12th and 13th Centuries, usually over chausses and may have had poleyns directly attached to them.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Culet -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Culet">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Trunck"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasFrontBackSelector"/>
+                                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BackSelector"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasUpperLowerSelector"/>
+                                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LowerSelector"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A culet is a piece of plate armour consisting of small, horizontal lamés that protect the small of the back or the buttocks.[1]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#DomainEntity -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#DomainEntity"/>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Elbow -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Elbow">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Arm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Face -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Face">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Head"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Fauld -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Fauld">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Waist"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">and a Faulds are a piece of plate armour worn below a breastplate to protect the waist and hips. They take the form of bands of metal surrounding both legs, potentially surrounding the entire hips in a form similar to a skirt.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Foot -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Foot">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Leg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Forearm -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Forearm">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Arm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#FrontBackSelector -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#FrontBackSelector">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Selector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#FrontSelector -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#FrontSelector">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#FrontBackSelector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Gauntlet -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Gauntlet">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Hand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Gorget -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Gorget">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Neck"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(or bevor), 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A gorget originally was a steel or leather collar designed to protect the throat. It was a feature of older types of armour and intended to protect against swords and other non-projectile weapons. Later, particularly from the 18th century onwards, the gorget became primarily ornamental, serving only as a symbolic accessory on military uniforms.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Greave -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Greave">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Leg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A greave (from the Old French `shin, shin armour&#39; from the Arabic jaurab, meaning stocking[1]) is a piece of armour that protects the leg. Often in matched pairs (a pair of greaves), greaves may be constructed of materials ranging from padded cloth to steel plate. Some designs protect only the lower leg (a half-greave) or extend upwards to protect the thigh.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Groin -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Groin">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Trunck"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#HalfGreave -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#HalfGreave">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LowerLeg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Hand -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Hand">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Arm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Head -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Head">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#HeadArmour -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#HeadArmour">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Head"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Head"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Helmet -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Helmet">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Head"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Hip -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Hip">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Leg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Trunck"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Knee -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Knee">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Leg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Selector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LeftSelector -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LeftSelector">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+        <owl:disjointWith rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#RightSelector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Leg -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Leg">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Foot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Thigh"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Knee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LowerLeg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Shin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Hip"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LegArmour -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LegArmour">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Leg"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Leg"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LowerLeg -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LowerLeg">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Leg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LowerSelector -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LowerSelector">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperLowerSelector"/>
+        <owl:disjointWith rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperSelector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#MailSkirt -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#MailSkirt">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyArmour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Neck -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Neck">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Pauldron -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Pauldron">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Shoulder"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(or spaulders), 
+
+
+
+
+
+
+
+A pauldron (sometimes spelled pouldron or powldron) is a component of plate armour, which evolved from spaulders in the 15th century. As with spaulders, pauldrons cover the shoulder area. Pauldrons tend to be larger than spaulders, covering the armpit, and sometimes parts of the back and chest. A pauldron typically consists of a single large dome-shaped piece to cover the shoulder (the `cop&#39;) with multiple lamés attached to it to defend the arm and upper shoulder. On armour designed for mounted combat, whether in the tournament or the field, the pauldrons would usually be asymmetrical, with one pauldron sporting a cut-away to make room for a lance rest.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyArmour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Poleyn -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Poleyn">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Knee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The poleyn was a component of Medieval and Renaissance armor that protected the knee. During the transition from mail armor to plate armor, this was among the earliest plate components to develop. They first appeared in the mid-thirteenth century and remained in use until the early seventeenth century when firearms made them obsolete. They hung from the Fauld.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#RightSelector -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#RightSelector">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Sabaton -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Sabaton">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Foot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Sabaton or solleret is part of a Knight&#39;s armour that covers the foot.[1] Fifteenth century sabatons typically end in a tapered point well past the actual toes of the wearer&#39;s foot. Sabatons of the first half of sixteenth century end at the tip of the toe and may be wider than the actual foot.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Selector -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Selector">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#DomainEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Shin -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Shin">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LowerLeg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Shoulder -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Shoulder">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Arm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Trunck"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Tassets -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Tassets">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Thigh"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasUpperLowerSelector"/>
+                                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperSelector"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tassets are a piece of plate armour designed to protect the upper legs. They take the form of separate plates hanging from the breastplate or faulds. They may be made from a single piece or segmented. Tassets were mainly used in the 17th Century.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Thigh -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Thigh">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Leg"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Trunck -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Trunck">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#TrunckArmour -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#TrunckArmour">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Trunck"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Trunck"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperArm -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperArm">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Arm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperLowerSelector -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperLowerSelector">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Selector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperSelector -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperSelector">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperLowerSelector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Vambrace -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Vambrace">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Forearm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vambraces (French language avant-bras Polish language karwasz, sometimes known as lower cannons in the Middle Ages) are `tubular&#39; or `gutter&#39; defences for the forearm, developed first in the ancient world by the Romans, but only formally named during the early 14th century, as part of a suit of plate armour. They were made of either leather, sometimes reinforced with longitudinal strips of hardened hide or metal (a crafting method named `splinted armour&#39;), or from a single piece of worked steel and worn with other pieces of armour. Vambraces are generally called forearm guards, with or without separate couters. Vambraces formed the integral part of the Great Steppe, Central Asian and Islamic warrior armor. The highest forms of vambraces, in terms of art and utility, were developed in Italy and Germany during the Renaissance in Europe and by the Persian and Turkish armorers during the corresponding time period in Asia. Vambraces remained long in use after the high mark of Renaissance armor in Europe, for example in Poland until 1770s, while on the fringes of Europe (the Caucasus) until the second half of the 19th century, while in Asia at least until the mid-19th century (Persia and Indian subcontinent). Archers often wear bracers, a variant of vambraces, to protect their arms while shooting.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Visor -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Visor">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Face"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Waist -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Waist">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Trunck"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Wrist -->
+
+    <owl:Class rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Wrist">
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#hasLateralitySelector"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Arm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyArmour"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Selector"/>
+        </owl:members>
+    </rdf:Description>
+    <owl:Class>
+        <rdfs:subClassOf rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyArmour"/>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#PlateArmour"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#isProtectorOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#BodyPart"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Couter"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Cuirass"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Cuisses"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Culet"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Fauld"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Gauntlet"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Gorget"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Greave"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#HalfGreave"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Helmet"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Pauldron"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Poleyn"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Sabaton"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Tassets"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Vambrace"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Visor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Arm"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Elbow"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Face"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Foot"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Forearm"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Groin"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Hand"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Head"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Hip"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Knee"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Leg"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LowerLeg"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Neck"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Shin"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Shoulder"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Thigh"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Trunck"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperArm"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Waist"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Wrist"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#FrontBackSelector"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#LateralitySelector"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#UpperLowerSelector"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Couter"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Cuirass"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Cuisses"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Culet"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Fauld"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Gauntlet"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Gorget"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Greave"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Pauldron"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Sabaton"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Tassets"/>
+            <rdf:Description rdf:about="http://www.cs.man.ac.uk/~stevensr/ontology/armour.owl#Vambrace"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1787) http://owlapi.sourceforge.net -->
+
